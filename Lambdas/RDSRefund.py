@@ -18,6 +18,9 @@ def lambda_handler(event,context):
     query = "DELETE FROM BookingTransactions WHERE Buyer=%s AND BTransactionID=%s"
     cursor.execute(query,(email,id))
     connection.commit()
+    ins = "UPDATE ProfileUsers SET Reward = Reward - 10 WHERE email = %s"
+    cursor.execute(ins, (email))
+    connection.commit()
     cursor.close()
     try:
         ses_client = boto3.client("ses", region_name="us-east-1")
@@ -39,3 +42,4 @@ def lambda_handler(event,context):
                     'data': 'Deleted but please verify email.'
                 })
             }
+        

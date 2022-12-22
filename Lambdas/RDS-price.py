@@ -16,7 +16,10 @@ def lambda_handler(event,context):
     cursor=connection.cursor()
     print(pick)
     print(drop)
-    cursor.execute("SELECT {0} from Price where PLID=%s;".format(drop),(pick))
+    print(format(drop))
+    ins = "SELECT `" + drop + "` from Price where PLID=%s"
+    print(ins)
+    cursor.execute(ins,(pick))
     rows=cursor.fetchone()
     cursor.close()
     print(rows)
