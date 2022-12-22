@@ -1,0 +1,97 @@
+<html>
+<head>
+</head>
+<body>
+	<h1>Plan your trip {{Email}}</h1> 
+<form action="/specify" method="POST">
+
+<label for="start">Starting Location</label>
+<select name="start" id="start" required>
+    <option value="Anchorage">Anchorage</option> 
+    <option value="Atlanta">Atlanta</option> 
+    <option value="Austin">Austin</option> 
+    <option value="Baltimore">Baltimore</option> 
+    <option value="Boston">Boston</option> 
+    <option value="Chicago">Chicago</option> 
+    <option value="Dallas">Dallas</option> 
+    <option value="Denver">Denver</option> 
+    <option value="Honolulu">Honolulu</option> 
+    <option value="Houston">Houston</option> 
+    <option value="Indianapolis">Indianapolis</option> 
+    <option value="Jacksonville">Jacksonville</option> 
+    <option value="Las Vegas">Las Vegas</option> 
+    <option value="Los Angeles">Los Angeles</option> 
+    <option value="Memphis">Memphis</option> 
+    <option value="Miami">Miami</option> 
+    <option value="New Orleans">New Orleans</option> 
+    <option value="New York">New York</option> 
+    <option value="Newark">Newark</option> 
+    <option value="Oakland">Oakland</option> 
+    <option value="Philadelphia">Philadelphia</option> 
+    <option value="Phoenix">Phoenix</option> 
+    <option value="Portland">Portland</option> 
+    <option value="San Antonio">San Antonio</option> 
+    <option value="San Diego">San Diego</option> 
+    <option value="San Francisco">San Francisco</option> 
+    <option value="San Jose">San Jose</option> 
+    <option value="Seattle">Seattle</option> 
+    <option value="Tampa">Tampa</option> 
+    <option value="Tucson">Tucson</option> 
+    <option value="Washington DC">Washington DC</option> 
+</select>
+
+<br>
+<br>
+
+<label for="end">Ending Location</label>
+<select name="end" id="end" required>
+    <option value="Anchorage">Anchorage</option> 
+    <option value="Atlanta">Atlanta</option> 
+    <option value="Austin">Austin</option> 
+    <option value="Baltimore">Baltimore</option> 
+    <option value="Boston">Boston</option> 
+    <option value="Chicago">Chicago</option> 
+    <option value="Dallas">Dallas</option> 
+    <option value="Denver">Denver</option> 
+    <option value="Honolulu">Honolulu</option> 
+    <option value="Houston">Houston</option> 
+    <option value="Indianapolis">Indianapolis</option> 
+    <option value="Jacksonville">Jacksonville</option> 
+    <option value="Las Vegas">Las Vegas</option> 
+    <option value="Los Angeles">Los Angeles</option> 
+    <option value="Memphis">Memphis</option> 
+    <option value="Miami">Miami</option> 
+    <option value="New Orleans">New Orleans</option> 
+    <option value="New York">New York</option> 
+    <option value="Newark">Newark</option> 
+    <option value="Oakland">Oaklandp</option> 
+    <option value="Philadelphia">Philadelphia</option> 
+    <option value="Phoenix">Phoenix</option> 
+    <option value="Portland">Portland</option> 
+    <option value="San Antonio">San Antonio</option> 
+    <option value="San Diego">San Diego</option> 
+    <option value="San Francisco">San Franciscop</option> 
+    <option value="San Jose">San Josep</option> 
+    <option value="Seattle">Seattle</option> 
+    <option value="Tampa">Tampa</option> 
+    <option value="Tucson">Tucson</option> 
+    <option value="Washington DC">Washington DC</option> 
+</select>
+<br>
+
+<label for="date">Choose a Date and Time:</label>
+<input type="datetime-local" id="date" name="date" required>
+</br>
+
+	<input type="submit" value = "Find trips" />
+</form>
+
+<br>
+<a href="/home">Home</a>
+<br>
+<a href="/logout">Logout</a>
+
+</body>
+
+
+</html>

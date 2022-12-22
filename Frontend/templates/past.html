@@ -1,0 +1,39 @@
+<html>
+<head>
+</head>
+<body>
+
+<h1>Welcome {{Email}}</h1> 
+
+<style type="text/css">
+	table, th, td{
+		border: 1px solid black;
+	}
+</style>
+
+Here is your data:
+
+<table>
+    <th>Departure Location</th>
+	<th>Arrival Location</th>
+    <th>Departure Time</th>
+    <th>Cost</th>
+
+{% for line in data %}
+	<tr>
+        <td>{{line[15]}}</td>
+        <td>{{line[16]}}</td>
+        <td>{{line[17]}}</td>
+        <th>{{line[12]}}</th>
+        
+	</tr>
+{% endfor %}
+</table>
+<br>
+
+<a href="/home">Home</a>
+<br>
+<a href="/logout">Logout</a>
+
+</body>
+

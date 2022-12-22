@@ -1,0 +1,24 @@
+<html>
+<head>
+</head>
+<body>
+
+<h1>Welcome {{Email}}</h1> 
+ 
+
+<a href="/location">Plan a trip</a>
+<br>
+<a href="/profile">Edit Profile</a>
+<br>
+<a href="/upcoming">Adjust upcoming trips</a>
+<br>
+<a href="https://ccproject.auth.us-east-1.amazoncognito.com/login?client_id=h7ci62rp79b5lqk5u8enjjnbd&response_type=code&scope=email+openid&redirect_uri=https://ec2-18-234-140-63.compute-1.amazonaws.com:8080/store">Entertainment</a>
+<br>
+<a href="/logout">Logout</a>
+{% if error %}
+<p class="error"> {{error}}</p>
+{% endif %}
+</body>
+
+
+</html>

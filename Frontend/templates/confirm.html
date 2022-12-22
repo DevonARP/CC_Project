@@ -1,0 +1,55 @@
+<html>
+<head>
+</head>
+<body>
+
+<form action="/confirm" method="POST">
+	<h1>Confirm Ticket</h1> 
+
+    <style type="text/css">
+        table, th, td{
+            border: 1px solid black;
+        }
+    </style>
+    
+    Here is your trip:
+    
+    <table>
+        <th>Departure Location</th>
+        <th>Arrival Location</th>
+        <th>Departure Time</th>
+        <th>Bus Type</th>
+        <th>Price</th>
+    
+        <tr>
+            <td>{{trip[2]}}</td>
+            <td>{{trip[3]}}</td>
+            <td>{{trip[4]}}</td>
+            <td>{{trip[5]}}</td>
+            <td>{{price[0]}}</td>
+        </tr>
+    </table>
+    <br>
+    <label for="pay">Payment</label>
+    <select name="pay" id="pay" required>
+        {% for line in data %}
+        <option value="{{line[11]}}">{{line[11]}}</option> 
+        {% endfor %}
+    </select>
+
+
+    <input type="submit" value="Confirm Trip">
+    {% if error %}
+<p class="error"> {{error}}</p>
+{% endif %}
+</form>
+
+<br>
+<a href="/home">Home</a>
+<br>
+<a href="/logout">Logout</a>
+
+</body>
+
+
+</html>

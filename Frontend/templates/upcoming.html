@@ -1,0 +1,51 @@
+<html>
+<head>
+</head>
+<body>
+
+<form action="/refund" method="POST">
+	<h1>Welcome {{Email}}</h1> 
+
+    <style type="text/css">
+        table, th, td{
+            border: 1px solid black;
+        }
+    </style>
+    
+    Here are your results:
+    
+    <table>
+        <th>Departure Location</th>
+        <th>Arrival Location</th>
+        <th>Departure Time</th>
+        <th>Bus Type</th>
+        <th>Price</th>
+        <th>Card</th>
+    
+    {% for line in data %}
+        <tr>
+            <td><input type="radio" name="id" value="{{line[0]}}" required>{{line[7]}}</input></td>
+            <td>{{line[8]}}</td>
+            <td>{{line[9]}}</td>
+            <td>{{line[10]}}</td>
+            <td>{{line[4]}}</td>
+            <td>{{line[3]}}</td>
+        </tr>
+    {% endfor %}
+    </table>
+
+    <input type="submit" value="Click here to refund" onclick="return confirm('Are you sure you want to refund this trip?')">
+    {% if error %}
+<p class="error"> {{error}}</p>
+{% endif %}
+</form>
+
+<br>
+<a href="/home">Home</a>
+<br>
+<a href="/logout">Logout</a>
+
+</body>
+
+
+</html>

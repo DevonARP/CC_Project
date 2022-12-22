@@ -1,0 +1,57 @@
+<html>
+<head>
+</head>
+<body>
+
+<h1>Welcome {{Email}}</h1> 
+
+<style type="text/css">
+	table, th, td{
+		border: 1px solid black;
+	}
+</style>
+
+Here is your data:
+
+<table>
+    <th>first name</th>
+	<th>last name</th>
+    <th>email</th>
+    <th>contact</th>
+    <th>points</th>
+
+	<tr>
+        {% for line in data %}
+        <td>{{line[0]}}</td>
+        <td>{{line[1]}}</td>
+        <td>{{line[3]}}</td>
+        <th>{{line[4]}}</th>
+        <th>{{line[5]}}</th>
+        {% endfor %}
+	</tr>
+</table>
+<br>
+Any changes can be done below:
+<form action="/profileupdate" method="GET">
+    {% for line in data %}
+    <input type="text" name = "first" placeholder="{{line[0]}}" > </br>
+    <input type="text" name = "last" placeholder="{{line[1]}}" > </br>
+    <input type="text" name = "email" placeholder="{{line[3]}}" > </br>
+    <input type="text" name = "contact" placeholder="{{line[4]}}" > </br>
+    <input type="password" name = "password" placeholder="Password" > </br>
+    {% endfor %}
+<input type="submit" value="Change">
+</form>
+
+<a href="/Payments">Payment Info</a>
+<br>
+<a href="/Past">Past Trips</a>
+<br>
+<a href="/home">Home</a>
+<br>
+<a href="/logout">Logout</a>
+
+</body>
+
+
+</html>
